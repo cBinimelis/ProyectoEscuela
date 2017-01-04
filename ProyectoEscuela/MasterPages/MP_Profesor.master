@@ -1,0 +1,87 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MP_Profesor.master.cs" Inherits="MP_Profesor" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-cl">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#ff6f00" />
+    <title></title>
+    <link id="favicon1" runat="server" rel="shortcut icon" href="/images/lapizlogo.ico" type="image/x-icon" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="amber lighten-5">
+    <main>
+    <form id="form1" runat="server">
+        <nav class="amber darken-4">
+
+            <%--ESTRUCTURA DEL DROPDOWN LIST DE NAVEGACION--%>
+            <ul id="dropdown1" class="dropdown-content red-text">
+              <li><a href="Integrantes.aspx">Integrantes</a></li>
+              <li class="divider"></li>
+              <li><a href="Notas.aspx">Notas</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">Reportes</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">Faltas</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">Reuniones</a></li>
+            </ul>
+            
+            <ul id="dropdown2" class="dropdown-content">
+              <li><a href="Integrantes.aspx">Integrantes</a></li>
+              <li class="divider"></li>
+              <li><a href="Notas.aspx">Notas</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">Reportes</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">Faltas</a></li>
+              <li class="divider"></li>
+              <li><a href="#!">Reuniones</a></li>
+            </ul>
+                <div class="nav-wrapper">
+                    <a href="InicioProfesor.aspx" class="brand-logo center">Proyecto Escuela</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="Comunicados.aspx">Comunicados</a></li>
+                        <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Curso<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a href="CierreSesion.aspx">Cerrar Sesión</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li><div class="userView">
+                              <img class="background" src="images/profesor.jpg" />
+                              <a href="#!user"><img class="circle" src="images/perfil.jpg"></a>
+                              <a href="#!name"><span class="white-text name">Profesor</span></a>
+                              <a href="#!email"><span class="white-text email">mail@gmail.com</span></a>
+                            </div>
+                        </li>
+                        <li><a href="#">Comunicados</a></li>
+                        <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Curso<i class="material-icons right">arrow_drop_down</i></a></li>
+                        <li><a href="CierreSesion.aspx">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </nav>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+        </main>
+    <footer class="amber darken-4 page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2016 Desarrollado por Cristofer Binimelis
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="dist/sweetalert.min.js"></script>
+    <script src="js/JS_Personal.js"></script>
+</body>
+</html>

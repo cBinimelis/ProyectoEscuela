@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="bd_educacion" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=localhost;Initial Catalog=bd_educacion;Persist Security Info=True;User ID=sa;MultipleActiveResultSets=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="BD_EducacionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Alumnos" Member="Alumnos">
+    <Type Name="Alumnos">
+      <Column Name="id_Alumno" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_usuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Resumen" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="id_curso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_tipoAlumno" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Fecha_ingreso" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_egreso" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Alumnos_Apoderados" Member="Apoderados" ThisKey="id_Alumno" OtherKey="id_Alumno" Type="Apoderados" />
+      <Association Name="Alumnos_AsignaturaAlumno" Member="AsignaturaAlumno" ThisKey="id_Alumno" OtherKey="id_Alumno" Type="AsignaturaAlumno" />
+      <Association Name="Alumnos_EvaluacionesAlumno" Member="EvaluacionesAlumno" ThisKey="id_Alumno" OtherKey="id_Alumno" Type="EvaluacionesAlumno" />
+      <Association Name="Alumnos_Publicacion_SubForo" Member="Publicacion_SubForo" ThisKey="id_Alumno" OtherKey="id_Alumno" Type="Publicacion_SubForo" />
+      <Association Name="Cursos_Alumnos" Member="Cursos" ThisKey="id_curso" OtherKey="id_curso" Type="Cursos" IsForeignKey="true" />
+      <Association Name="Tipo_Alumno_Alumnos" Member="Tipo_Alumno" ThisKey="id_tipoAlumno" OtherKey="id_tipoAlumno" Type="Tipo_Alumno" IsForeignKey="true" />
+      <Association Name="Usuarios_Alumnos" Member="Usuarios" ThisKey="id_usuario" OtherKey="id_usuario" Type="Usuarios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Apoderados" Member="Apoderados">
+    <Type Name="Apoderados">
+      <Column Name="id_Apoderado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_usuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_Alumno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Alumnos_Apoderados" Member="Alumnos" ThisKey="id_Alumno" OtherKey="id_Alumno" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="Usuarios_Apoderados" Member="Usuarios" ThisKey="id_usuario" OtherKey="id_usuario" Type="Usuarios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AsignaturaAlumno" Member="AsignaturaAlumno">
+    <Type Name="AsignaturaAlumno">
+      <Column Name="id_Alumno" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_Asignatura" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="Alumnos_AsignaturaAlumno" Member="Alumnos" ThisKey="id_Alumno" OtherKey="id_Alumno" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="Asignaturas_AsignaturaAlumno" Member="Asignaturas" ThisKey="id_Asignatura" OtherKey="id_Asignatura" Type="Asignaturas" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Asignaturas" Member="Asignaturas">
+    <Type Name="Asignaturas">
+      <Column Name="id_Asignatura" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion_asignatura" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Asignaturas_AsignaturaAlumno" Member="AsignaturaAlumno" ThisKey="id_Asignatura" OtherKey="id_Asignatura" Type="AsignaturaAlumno" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comentario_Comunicados" Member="Comentario_Comunicados">
+    <Type Name="Comentario_Comunicados">
+      <Column Name="id_Comentario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_Autor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Contenido" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Fecha_Comentario" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="id_Comunicado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Comunicado_Comentario_Comunicados" Member="Comunicado" ThisKey="id_Comunicado" OtherKey="id_Comunicado" Type="Comunicado" IsForeignKey="true" />
+      <Association Name="Usuarios_Comentario_Comunicados" Member="Usuarios" ThisKey="id_Autor" OtherKey="id_usuario" Type="Usuarios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comentarios_SubForo" Member="Comentarios_SubForo">
+    <Type Name="Comentarios_SubForo">
+      <Column Name="id_Comentario" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_Almno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Contenido" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Fecha_Comentario" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="id_Publicacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Publicacion_SubForo_Comentarios_SubForo" Member="Publicacion_SubForo" ThisKey="id_Publicacion" OtherKey="id_Publicacion" Type="Publicacion_SubForo" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Comunicado" Member="Comunicado">
+    <Type Name="Comunicado">
+      <Column Name="id_Comunicado" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_Profesor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contenido" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Fecha_Comunicado" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="id_EstadoPublicacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_Importancia" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Comunicado_Comentario_Comunicados" Member="Comentario_Comunicados" ThisKey="id_Comunicado" OtherKey="id_Comunicado" Type="Comentario_Comunicados" />
+      <Association Name="Estado_Publicacion_Comunicado" Member="Estado_Publicacion" ThisKey="id_EstadoPublicacion" OtherKey="id_EstadoPublicacion" Type="Estado_Publicacion" IsForeignKey="true" />
+      <Association Name="Importancia_Comunicado" Member="Importancia" ThisKey="id_Importancia" OtherKey="id_Importancia" Type="Importancia" IsForeignKey="true" />
+      <Association Name="Profesores_Comunicado" Member="Profesores" ThisKey="id_Profesor" OtherKey="id_Profesor" Type="Profesores" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Conexiones" Member="Conexiones">
+    <Type Name="Conexiones">
+      <Column Name="id_usuario" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Primera_Conexion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Ultima_Conexion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Ultima_Edicion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Usuarios_Conexiones" Member="Usuarios" ThisKey="id_usuario" OtherKey="id_usuario" Type="Usuarios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Cursos" Member="Cursos">
+    <Type Name="Cursos">
+      <Column Name="id_curso" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="descripcion_curso" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Cursos_Alumnos" Member="Alumnos" ThisKey="id_curso" OtherKey="id_curso" Type="Alumnos" />
+      <Association Name="Cursos_Evaluaciones" Member="Evaluaciones" ThisKey="id_curso" OtherKey="id_Curso" Type="Evaluaciones" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Estado" Member="Estado">
+    <Type Name="Estado">
+      <Column Name="id_estado" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcion_estado" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Estado_Usuarios" Member="Usuarios" ThisKey="id_estado" OtherKey="id_Estado" Type="Usuarios" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Estado_Foto" Member="Estado_Foto">
+    <Type Name="Estado_Foto">
+      <Column Name="id_estadoFoto" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Estado_Foto_Foto_Perfil" Member="Foto_Perfil" ThisKey="id_estadoFoto" OtherKey="id_estadoFoto" Type="Foto_Perfil" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Estado_Publicacion" Member="Estado_Publicacion">
+    <Type Name="Estado_Publicacion">
+      <Column Name="id_EstadoPublicacion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Estado_Publicacion_Comunicado" Member="Comunicado" ThisKey="id_EstadoPublicacion" OtherKey="id_EstadoPublicacion" Type="Comunicado" />
+      <Association Name="Estado_Publicacion_Publicacion_SubForo" Member="Publicacion_SubForo" ThisKey="id_EstadoPublicacion" OtherKey="id_EstadoPublicacion" Type="Publicacion_SubForo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Evaluaciones" Member="Evaluaciones">
+    <Type Name="Evaluaciones">
+      <Column Name="id_Evaluacion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="id_Asignatura" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_Curso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Evaluacion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Evaluaciones_EvaluacionesAlumno" Member="EvaluacionesAlumno" ThisKey="id_Evaluacion" OtherKey="id_Evaluacion" Type="EvaluacionesAlumno" />
+      <Association Name="Cursos_Evaluaciones" Member="Cursos" ThisKey="id_Curso" OtherKey="id_curso" Type="Cursos" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.EvaluacionesAlumno" Member="EvaluacionesAlumno">
+    <Type Name="EvaluacionesAlumno">
+      <Column Name="id_Evaluacion" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_Alumno" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nota_Evaluacion" Type="System.String" DbType="VarChar(4) NOT NULL" CanBeNull="false" />
+      <Association Name="Alumnos_EvaluacionesAlumno" Member="Alumnos" ThisKey="id_Alumno" OtherKey="id_Alumno" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="Evaluaciones_EvaluacionesAlumno" Member="Evaluaciones" ThisKey="id_Evaluacion" OtherKey="id_Evaluacion" Type="Evaluaciones" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Foto_Galeria" Member="Foto_Galeria">
+    <Type Name="Foto_Galeria">
+      <Column Name="id_Foto" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(250) NOT NULL" CanBeNull="false" />
+      <Column Name="id_Profesor" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion_Foto" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Extension" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Publicacion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Profesores_Foto_Galeria" Member="Profesores" ThisKey="id_Profesor" OtherKey="id_Profesor" Type="Profesores" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Foto_Perfil" Member="Foto_Perfil">
+    <Type Name="Foto_Perfil">
+      <Column Name="id_fotoPerfil" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Extension" Type="System.String" DbType="VarChar(5) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Creacion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="id_estadoFoto" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Foto_Perfil_Usuarios" Member="Usuarios" ThisKey="id_fotoPerfil" OtherKey="id_fotoPerfil" Type="Usuarios" />
+      <Association Name="Estado_Foto_Foto_Perfil" Member="Estado_Foto" ThisKey="id_estadoFoto" OtherKey="id_estadoFoto" Type="Estado_Foto" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Genero" Member="Genero">
+    <Type Name="Genero">
+      <Column Name="id_genero" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Genero_Usuarios" Member="Usuarios" ThisKey="id_genero" OtherKey="id_genero" Type="Usuarios" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Importancia" Member="Importancia">
+    <Type Name="Importancia">
+      <Column Name="id_Importancia" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcion_importancia" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Importancia_Comunicado" Member="Comunicado" ThisKey="id_Importancia" OtherKey="id_Importancia" Type="Comunicado" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Profesores" Member="Profesores">
+    <Type Name="Profesores">
+      <Column Name="id_Profesor" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="id_usuario" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_ingreso" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_egreso" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="Profesores_Comunicado" Member="Comunicado" ThisKey="id_Profesor" OtherKey="id_Profesor" Type="Comunicado" />
+      <Association Name="Profesores_Foto_Galeria" Member="Foto_Galeria" ThisKey="id_Profesor" OtherKey="id_Profesor" Type="Foto_Galeria" />
+      <Association Name="Usuarios_Profesores" Member="Usuarios" ThisKey="id_usuario" OtherKey="id_usuario" Type="Usuarios" IsForeignKey="true" />
+      <Association Name="Usuarios_Profesores1" Member="Usuarios1" ThisKey="id_usuario" OtherKey="id_usuario" Type="Usuarios" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Publicacion_SubForo" Member="Publicacion_SubForo">
+    <Type Name="Publicacion_SubForo">
+      <Column Name="id_Publicacion" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="id_Alumno" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Titulo" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Contenido" Type="System.String" DbType="Text NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="Fecha_Publicacion" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="id_EstadoPublicacion" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Publicacion_SubForo_Comentarios_SubForo" Member="Comentarios_SubForo" ThisKey="id_Publicacion" OtherKey="id_Publicacion" Type="Comentarios_SubForo" />
+      <Association Name="Alumnos_Publicacion_SubForo" Member="Alumnos" ThisKey="id_Alumno" OtherKey="id_Alumno" Type="Alumnos" IsForeignKey="true" />
+      <Association Name="Estado_Publicacion_Publicacion_SubForo" Member="Estado_Publicacion" ThisKey="id_EstadoPublicacion" OtherKey="id_EstadoPublicacion" Type="Estado_Publicacion" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tipo" Member="Tipo">
+    <Type Name="Tipo">
+      <Column Name="id_tipo" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcion_tipo" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Association Name="Tipo_Usuarios" Member="Usuarios" ThisKey="id_tipo" OtherKey="id_Tipo" Type="Usuarios" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Tipo_Alumno" Member="Tipo_Alumno">
+    <Type Name="Tipo_Alumno">
+      <Column Name="id_tipoAlumno" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="descripcion_tipoAlumno" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="Tipo_Alumno_Alumnos" Member="Alumnos" ThisKey="id_tipoAlumno" OtherKey="id_tipoAlumno" Type="Alumnos" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Usuarios" Member="Usuarios">
+    <Type Name="Usuarios">
+      <Column Name="id_usuario" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Run" Type="System.String" DbType="VarChar(11) NOT NULL" CanBeNull="false" />
+      <Column Name="Primer_Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Segundo_Nombre" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido_paterno" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Apellido_materno" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Correo" Type="System.String" DbType="VarChar(100) NOT NULL" CanBeNull="false" />
+      <Column Name="Password" Type="System.String" DbType="VarChar(MAX) NOT NULL" CanBeNull="false" />
+      <Column Name="Direccion" Type="System.String" DbType="VarChar(150) NOT NULL" CanBeNull="false" />
+      <Column Name="Fecha_Nacimiento" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="id_genero" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_fotoPerfil" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_Tipo" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="id_Estado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Usuarios_Alumnos" Member="Alumnos" ThisKey="id_usuario" OtherKey="id_usuario" Type="Alumnos" />
+      <Association Name="Usuarios_Apoderados" Member="Apoderados" ThisKey="id_usuario" OtherKey="id_usuario" Type="Apoderados" />
+      <Association Name="Usuarios_Comentario_Comunicados" Member="Comentario_Comunicados" ThisKey="id_usuario" OtherKey="id_Autor" Type="Comentario_Comunicados" />
+      <Association Name="Usuarios_Conexiones" Member="Conexiones" ThisKey="id_usuario" OtherKey="id_usuario" Type="Conexiones" Cardinality="One" />
+      <Association Name="Usuarios_Profesores" Member="Profesores" ThisKey="id_usuario" OtherKey="id_usuario" Type="Profesores" />
+      <Association Name="Usuarios_Profesores1" Member="Profesores1" ThisKey="id_usuario" OtherKey="id_usuario" Type="Profesores" />
+      <Association Name="Estado_Usuarios" Member="Estado" ThisKey="id_Estado" OtherKey="id_estado" Type="Estado" IsForeignKey="true" />
+      <Association Name="Foto_Perfil_Usuarios" Member="Foto_Perfil" ThisKey="id_fotoPerfil" OtherKey="id_fotoPerfil" Type="Foto_Perfil" IsForeignKey="true" />
+      <Association Name="Genero_Usuarios" Member="Genero" ThisKey="id_genero" OtherKey="id_genero" Type="Genero" IsForeignKey="true" />
+      <Association Name="Tipo_Usuarios" Member="Tipo" ThisKey="id_Tipo" OtherKey="id_tipo" Type="Tipo" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

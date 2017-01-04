@@ -1,0 +1,67 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MP_Admin.master.cs" Inherits="MP_Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="es-cl">
+<head runat="server">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#263238" />
+    <title></title>
+    <link id="favicon1" runat="server" rel="shortcut icon" href="/images/lapizlogo.ico" type="image/x-icon" />
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body class="blue-grey lighten-5">
+    <main>
+    <form id="form1" runat="server">
+        <nav class="blue-grey darken-4">
+                <div class="nav-wrapper">
+                    <a href="#!" class="brand-logo center">Proyecto Escuela</a>
+                    <a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+                    <ul class="right hide-on-med-and-down">
+                        <li><a href="InicioAdmin.aspx">Home</a></li>
+                        <li><a href="Mantenedores.aspx">Mantenedores</a></li>
+                        <li><a href="Galeria_Admin.aspx">Galería</a></li>
+                        <li><a href="Eventos_Admin.aspx">Eventos</a></li>
+                        <li><a href="CierreSesion.aspx">Cerrar Sesión</a></li>
+                    </ul>
+                    <ul class="side-nav" id="mobile-demo">
+                        <li>
+                            <div class="userView">
+                                <img class="background" src="images/administrador.jpg" />
+                                <a href="#!user"><img runat="server" id="foto_perfil" class="circle" src="images/perfil.jpg"></a>
+                                <a href="#!name"><span runat="server" id="nombre_admin" class="white-text name">Admin</span></a>
+                                <a href="#!email"><span runat="server" id="correo_admin" class="white-text email">mail@gmail.com</span></a>
+                            </div>
+                        </li>
+                        <li><a href="InicioAdmin.aspx">Home</a></li>
+                        <li><a href="Mantenedores.aspx">Mantenedores</a></li>
+                        <li><a href="Galeria_Admin.aspx">Galería</a></li>
+                        <li><a href="Eventos_Admin.aspx">Eventos</a></li>
+                        <li><a href="CierreSesion.aspx">Cerrar Sesión</a></li>
+                    </ul>
+                </div>
+            </nav>
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+        </main>
+    <footer class="blue-grey darken-4 page-footer">
+        <div class="footer-copyright">
+            <div class="container">
+                © 2016 Desarrollado por Cristofer Binimelis
+            </div>
+        </div>
+    </footer>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="dist/sweetalert.min.js"></script>
+    <script src="js/JS_Personal.js"></script>
+</body>
+</html>
