@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Editar Galeria" Language="C#" MasterPageFile="MP_Admin.master" AutoEventWireup="true" CodeFile="Galeria_Admin.aspx.cs" Inherits="Galeria_Admin" %>
+﻿<%@ Page Title="Editar Galeria" Language="C#" MasterPageFile="~/MasterPages/MP_Admin.master" AutoEventWireup="true" CodeFile="Galeria_Admin.aspx.cs" Inherits="Galeria_Admin" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>

@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Comunicados" Language="C#" MasterPageFile="MP_Apoderado.master" AutoEventWireup="true" CodeFile="Comunicados_Apoderado.aspx.cs" Inherits="Comunicados_Apoderado" %>
+﻿<%@ Page Title="Comunicados" Language="C#" MasterPageFile="~/MasterPages/MP_Apoderado.master" AutoEventWireup="true" CodeFile="Comunicados_Apoderado.aspx.cs" Inherits="Comunicados_Apoderado" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>

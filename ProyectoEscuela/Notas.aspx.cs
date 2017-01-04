@@ -38,33 +38,33 @@ public partial class Notas : System.Web.UI.Page
         dd_asignatura.DataValueField = "id_Asignatura";
         dd_asignatura.DataBind();
     }
-    protected void btn_crear_Click(object sender, EventArgs e)
-    {
-        try
-        {
-            if (txt_nombre.Text.Trim().Equals(""))
-            {
-                Mensajes("¡Alto ahí!", "Sé que la vida de profesor es ajetreada, pero no se me apresure tanto. No deje campos vacíos", "warning");
-            }
-            else
-            {
-                data = new DataClassesDataContext();
-                Evaluaciones v = new Evaluaciones();
-                v.Descripcion = txt_nombre.Text;
-                v.id_Asignatura = Convert.ToInt32(dd_asignatura.SelectedValue);
-                v.id_Curso = Convert.ToInt32(dd_curso.SelectedValue);
-                v.Fecha_Evaluacion = Convert.ToDateTime(fecha.Value);
-                data.Evaluaciones.InsertOnSubmit(v);
-                data.SubmitChanges();
-                Mensajes("¡Felicidades!", "Has creado la evaluación exitosamente. Que tengas un lindo día", "success");
-                limpiar();
-            }
-        }
-        catch
-        {
+    //protected void btn_crear_Click(object sender, EventArgs e)
+    //{
+    //    try
+    //    {
+    //        if (txt_nombre.Text.Trim().Equals(""))
+    //        {
+    //            Mensajes("¡Alto ahí!", "Sé que la vida de profesor es ajetreada, pero no se me apresure tanto. No deje campos vacíos", "warning");
+    //        }
+    //        else
+    //        {
+    //            data = new DataClassesDataContext();
+    //            Evaluaciones v = new Evaluaciones();
+    //            v.Descripcion = txt_nombre.Text;
+    //            v.id_Asignatura = Convert.ToInt32(dd_asignatura.SelectedValue);
+    //            v.id_Curso = Convert.ToInt32(dd_curso.SelectedValue);
+    //            v.Fecha_Evaluacion = Convert.ToDateTime(fecha.Value);
+    //            data.Evaluaciones.InsertOnSubmit(v);
+    //            data.SubmitChanges();
+    //            Mensajes("¡Felicidades!", "Has creado la evaluación exitosamente. Que tengas un lindo día", "success");
+    //            limpiar();
+    //        }
+    //    }
+    //    catch
+    //    {
 
-        }
-    }
+    //    }
+    //}
 
     protected void enviarCorreo(String destinatario)
     {

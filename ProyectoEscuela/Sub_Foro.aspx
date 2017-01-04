@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Sub Foro" Language="C#" MasterPageFile="MP_Alumno.master" AutoEventWireup="true" CodeFile="Sub_Foro.aspx.cs" Inherits="Sub_Foro" %>
+﻿<%@ Page Title="Sub Foro" Language="C#" MasterPageFile="~/MasterPages/MP_Alumno.master" AutoEventWireup="true" CodeFile="Sub_Foro.aspx.cs" Inherits="Sub_Foro" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>

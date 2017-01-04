@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Notas" Language="C#" MasterPageFile="MP_Profesor.master" AutoEventWireup="true" CodeFile="Notas.aspx.cs" Inherits="Notas" %>
+﻿<%@ Page Title="Notas" Language="C#" MasterPageFile="~/MasterPages/MP_Profesor.master" AutoEventWireup="true" CodeFile="Notas.aspx.cs" Inherits="Notas" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
@@ -35,7 +35,7 @@
                     <div class="center">
                         <asp:UpdatePanel ID="CPan" runat="server">
                             <ContentTemplate>
-                                <asp:Button ID="btn_crear" runat="server" Text="Button" OnClick="btn_crear_Click" />
+                                <%--<asp:Button ID="btn_crear" runat="server" Text="Button" OnClick="btn_crear_Click" />--%>
                             </ContentTemplate>
                         </asp:UpdatePanel>
                     </div>

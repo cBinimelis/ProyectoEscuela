@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MP_Central.master" AutoEventWireup="true" CodeFile="CierreSesion.aspx.cs" Inherits="CierreSesion" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPages/MP_Central.master" AutoEventWireup="true" CodeFile="CierreSesion.aspx.cs" Inherits="CierreSesion" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
 </asp:Content>

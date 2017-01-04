@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Mantenedores" Language="C#" MasterPageFile="MP_Admin.master" AutoEventWireup="true" CodeFile="Mantenedores.aspx.cs" Inherits="Mantenedores" %>
+﻿<%@ Page Title="Mantenedores" Language="C#" MasterPageFile="~/MasterPages/MP_Admin.master" AutoEventWireup="true" CodeFile="Mantenedores.aspx.cs" Inherits="Mantenedores" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 

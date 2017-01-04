@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Alumnos" Language="C#" MasterPageFile="MP_Profesor.master" AutoEventWireup="true" CodeFile="Integrantes.aspx.cs" Inherits="Integrantes" %>
+﻿<%@ Page Title="Alumnos" Language="C#" MasterPageFile="~/MasterPages/MP_Profesor.master" AutoEventWireup="true" CodeFile="Integrantes.aspx.cs" Inherits="Integrantes" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>

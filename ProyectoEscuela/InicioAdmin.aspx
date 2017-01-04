@@ -1,4 +1,4 @@
-﻿<%@ page title="Home" language="C#" masterpagefile="MP_Admin.master" autoeventwireup="true" codefile="InicioAdmin.aspx.cs" inherits="InicioAdmin" %>
+﻿<%@ page title="Home" language="C#" masterpagefile="~/MasterPages/MP_Admin.master" autoeventwireup="true" codefile="InicioAdmin.aspx.cs" inherits="InicioAdmin" %>
 
   <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
   </asp:Content>
