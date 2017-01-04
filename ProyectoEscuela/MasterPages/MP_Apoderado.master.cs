@@ -11,7 +11,7 @@ public partial class MP_Apoderado : System.Web.UI.MasterPage
     {
         if (Session["Apoderado"] == null)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("../Default.aspx");
         }
         else
         {

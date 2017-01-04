@@ -8,10 +8,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#ff6f00" />
     <title></title>
-    <link id="favicon1" runat="server" rel="shortcut icon" href="/images/lapizlogo.ico" type="image/x-icon" />
+    <link id="favicon1" runat="server" rel="shortcut icon" href="../images/lapizlogo.ico" type="image/x-icon" />
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
-    <link type="text/css" rel="stylesheet" href="css/materialize.min.css" />
-    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css" />
+    <link type="text/css" rel="stylesheet" href="../css/materialize.min.css" />
+    <link rel="stylesheet" type="text/css" href="../dist/sweetalert.css" />
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
@@ -62,7 +62,7 @@
                         </li>
                         <li><a href="#">Comunicados</a></li>
                         <li><a class="dropdown-button" href="#!" data-activates="dropdown2">Curso<i class="material-icons right">arrow_drop_down</i></a></li>
-                        <li><a href="CierreSesion.aspx">Cerrar Sesión</a></li>
+                        <li><a href="../CierreSesion.aspx">Cerrar Sesión</a></li>
                     </ul>
                 </div>
             </nav>
@@ -79,9 +79,9 @@
             </div>
         </div>
     </footer>
-    <script src="js/jquery-2.1.1.min.js"></script>
-    <script src="js/materialize.min.js"></script>
-    <script src="dist/sweetalert.min.js"></script>
-    <script src="js/JS_Personal.js"></script>
+    <script src="../js/jquery-2.1.1.min.js"></script>
+    <script src="../js/materialize.min.js"></script>
+    <script src="../dist/sweetalert.min.js"></script>
+    <script src="../js/JS_Personal.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@ public partial class MP_Alumno : System.Web.UI.MasterPage
     {
         if (Session["Alumno"] == null)
         {
-            Response.Redirect("Default.aspx");
+            Response.Redirect("../Default.aspx");
         }
         else
         {

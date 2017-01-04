@@ -37,7 +37,7 @@ public partial class InicioSesion : System.Web.UI.Page
                             {
                                 case 1:
                                     Session["Admin"] = txt_usuario.Text;
-                                    Response.Redirect("InicioAdmin.aspx");
+                                    Response.Redirect("Nav_Admin/InicioAdmin.aspx");
                                     break;
                                 case 2:
                                     Session["Alumno"] = txt_usuario.Text;
