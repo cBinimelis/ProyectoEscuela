@@ -12,8 +12,8 @@ using System.Web.UI.WebControls;
 
     public class sql
     {
-        String conexion = "Data Source=localhost;Initial Catalog=bd_educacion;Persist Security Info=True;User ID=sa;Password=inacap;MultipleActiveResultSets=True";
-        //String conexion = "Data Source=204.93.168.25;Initial Catalog=horstell_cristofer;Persist Security Info=True;User ID=horstell_cristofer;Password=freeza21;MultipleActiveResultSets=True";
+        //String conexion = "Data Source=localhost;Initial Catalog=bd_educacion;Persist Security Info=True;User ID=sa;Password=inacap;MultipleActiveResultSets=True";
+        String conexion = "Data Source=204.93.168.25;Initial Catalog=horstell_cristofer;Persist Security Info=True;User ID=horstell_cristofer;Password=freeza21;MultipleActiveResultSets=True";
         SqlConnection con;
         SqlCommand sqlcm;
         SqlDataReader sqldr;
