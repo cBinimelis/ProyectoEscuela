@@ -41,15 +41,15 @@ public partial class InicioSesion : System.Web.UI.Page
                                     break;
                                 case 2:
                                     Session["Alumno"] = txt_usuario.Text;
-                                    Response.Redirect("InicioAlumno.aspx");
+                                    Response.Redirect("Nav_Alumno/InicioAlumno.aspx");
                                     break;
                                 case 3:
                                     Session["Profesor"] = txt_usuario.Text;
-                                    Response.Redirect("InicioProfesor.aspx");
+                                    Response.Redirect("Nav_Profesor/InicioProfesor.aspx");
                                     break;
                                 case 4:
                                     Session["Apoderado"] = txt_usuario.Text;
-                                    Response.Redirect("InicioApoderado.aspx");
+                                    Response.Redirect("Nav_Apoderado/InicioApoderado.aspx");
                                     break;
                             }
                             break;
