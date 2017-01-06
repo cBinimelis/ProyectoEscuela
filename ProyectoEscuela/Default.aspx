@@ -22,7 +22,7 @@
                     <div class="card-panel center">
                         <i class="large material-icons blue-text">alarm</i>
                         <p class="center"><b>Optimiza tu tiempo</b></p>
-                        <p class="light center">Deja de preocuparte por tener que perder tiempo para realizar consultas, puedes hacer todas las consultas que quieras desde la comodidad de tu PC o Smartphone.</p>
+                        <p class="light center">No te preocupes por tener que perder tiempo en realizar consultas, puedes hacer todas las que quieras desde la comodidad de tu PC o Smartphone.</p>
                     </div>
                 </div>
                 <div class="col s12 l4">
