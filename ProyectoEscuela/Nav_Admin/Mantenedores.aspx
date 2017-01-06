@@ -16,7 +16,7 @@
     <%--MANTENEDOR DE USUARIOS--%>
     <div class="row">
         <h3 class="center"><b>Mantenedor de Usuarios</b></h3>
-        <div id="mant_usuarios" class="col s12" style="overflow: auto">
+        <div id="mant_usuarios" class="col s12" style="overflow-x: auto">
             <asp:GridView ID="grilla_usuarios" CssClass="responsive-table highlight bordered" runat="server" AutoGenerateColumns="False"
                 DataSourceID="SQLUsuarios" DataKeyNames="id_usuario,id_genero,id_estado,id_tipo" RowStyle-Wrap="False" HeaderStyle-Wrap="False">
                 <Columns>
@@ -29,11 +29,11 @@
                     <asp:BoundField DataField="Apellido_paterno" HeaderText="Apellido Paterno" SortExpression="Apellido_paterno" />
                     <asp:BoundField DataField="Apellido_materno" HeaderText="Apellido Materno" SortExpression="Apellido_materno" />
                     <asp:BoundField DataField="Correo" HeaderText="Correo" SortExpression="Correo" />
-                    <asp:BoundField DataField="Contraseña" HeaderText="Contraseña" SortExpression="Contraseña" />
+                    <asp:BoundField DataField="Contraseña" HeaderText="Contraseña" SortExpression="Contraseña" Visible="False" />
                     <asp:BoundField DataField="Dirección" HeaderText="Dirección" SortExpression="Dirección" />
                     <asp:BoundField DataField="Nacimiento" HeaderText="Nacimiento" SortExpression="Nacimiento" Visible="false" />
                     <asp:BoundField DataField="id_genero" HeaderText="id_genero" ReadOnly="True" SortExpression="id_genero" Visible="False" />
-                    <asp:TemplateField HeaderText="Genero" SortExpression="Genero">
+                    <asp:TemplateField HeaderText="Genero del Usuario" SortExpression="Genero">
                         <EditItemTemplate>
                             <asp:DropDownList ID="drop_genero" runat="server" DataSourceID="SQL_Genero" DataTextField="Descripcion" DataValueField="id_genero"></asp:DropDownList>
                         </EditItemTemplate>
@@ -42,7 +42,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_tipo" HeaderText="id_tipo" ReadOnly="True" SortExpression="id_tipo" Visible="False" />
-                    <asp:TemplateField HeaderText="Tipo" SortExpression="Tipo">
+                    <asp:TemplateField HeaderText="Tipo de Usuario" SortExpression="Tipo">
                         <EditItemTemplate>
                             <asp:DropDownList ID="drop_tipo" runat="server" DataSourceID="SQL_Tipo" DataTextField="descripcion_tipo" DataValueField="id_tipo"></asp:DropDownList>
                         </EditItemTemplate>
@@ -51,7 +51,7 @@
                         </ItemTemplate>
                     </asp:TemplateField>
                     <asp:BoundField DataField="id_estado" HeaderText="id_estado" ReadOnly="True" SortExpression="id_estado" Visible="False" />
-                    <asp:TemplateField HeaderText="Estado" SortExpression="Estado">
+                    <asp:TemplateField HeaderText="Estado del Usuario" SortExpression="Estado">
                         <EditItemTemplate>
                             <asp:DropDownList ID="drop_estado" runat="server" DataSourceID="SQL_Estado" DataTextField="descripcion_estado" DataValueField="id_estado"></asp:DropDownList>
                         </EditItemTemplate>
@@ -181,13 +181,13 @@
     <%--MANTENEDOR DE ALUMNOS--%>
     <div class="row">
         <h3 class="center"><b>Mantenedor de Alumnos</b></h3>
-        <div class="col s12">
+        <div class="col s12" style="overflow-x: auto">
             <asp:GridView ID="grilla_alumnos" CssClass="responsive-table highlight bordered" runat="server" AutoGenerateColumns="False" DataSourceID="SQLAlumnos">
                 <Columns>
                     <asp:CommandField ButtonType="Link" ShowEditButton="true" ControlStyle-CssClass="waves-effect waves-light black btn" EditText="<i class='material-icons'>create</i>"
                         CancelText="<i class='material-icons'>block</i>" UpdateText="<i class='material-icons'>done_all</i>" />
                     <asp:BoundField DataField="id_Alumno" HeaderText="id_Alumno" SortExpression="id_Alumno" Visible="False" />
-                    <asp:BoundField DataField="id_usuario" HeaderText="id_usuario" SortExpression="id_usuario" Visible="True" />
+                    <asp:BoundField DataField="id_usuario" HeaderText="id_usuario" SortExpression="id_usuario" Visible="False" />
                     <asp:BoundField DataField="Nombre_Completo" HeaderText="Nombre Completo" SortExpression="Nombre_Completo" ReadOnly="True" />
                     <asp:BoundField DataField="Run" HeaderText="Run" SortExpression="Run" />
                     <asp:BoundField DataField="id_curso" HeaderText="id_curso" SortExpression="id_curso" Visible="False" />
@@ -226,6 +226,9 @@
         <div class="container">
             <h5 class="center"><b>Registrar Usuario</b></h5>
             <div class="card-panel blue-grey darken-4 white-text">
+                <div class="row">
+                    <asp:DropDownList ID="dd_usuario" runat="server"></asp:DropDownList>
+                </div>
             </div>
         </div>
     </div>

@@ -17,6 +17,7 @@ public partial class Mantenedores : System.Web.UI.Page
         if (!IsPostBack)
         {
             llenaDropGenero();
+            llenaDropUsuarioNA();
         }
     }
 
@@ -79,14 +80,11 @@ public partial class Mantenedores : System.Web.UI.Page
         dd_genero.DataBind();
     }
 
-    //protected void llenaDropTipo()
-    //{
-    //    data = new DataClassesDataContext();
-    //    dd_tipo.DataSource = data.Tipo;
-    //    dd_tipo.DataTextField = "descripcion_tipo";
-    //    dd_tipo.DataValueField = "id_tipo";
-    //    dd_tipo.DataBind();
-    //}
+    protected void llenaDropUsuarioNA()
+    {
+        String query = "SELEC * FROM Usuarios WHERE id_Tipo = 4";
+        sql.llenacombo(dd_usuario, query, "PrimNombre", "id_Usuario");
+    }
 
     protected void SubeImg(int id_foto)
     {
