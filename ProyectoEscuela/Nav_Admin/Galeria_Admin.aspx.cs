@@ -96,7 +96,7 @@ public partial class Galeria_Admin : System.Web.UI.Page
                 relleno += "</div>";
                 relleno += "<div class='parallax-container'>";
                 relleno += "<div class='parallax'>";
-                relleno += "<img src='images/galeria" + paralax + ".jpg' />";
+                relleno += "<img src='../images/galeria" + paralax + ".jpg' />";
                 relleno += "</div>";
                 relleno += "</div>";
                 relleno += "<div class='container'>";
@@ -104,7 +104,7 @@ public partial class Galeria_Admin : System.Web.UI.Page
             relleno += "<div class='col s6 l4'>";
             relleno += "<div class='card medium'>";
             relleno += "<div class='card-image'>";
-            relleno += "<img class='materialboxed' data-caption='" + lector[2].ToString() + "' src='images/Galeria/" + lector[4].ToString() + "'>";
+            relleno += "<img class='materialboxed' data-caption='" + lector[2].ToString() + "' src='../images/Galeria/" + lector[4].ToString() + "'>";
             relleno += "<span class='card-title'>" + lector[1].ToString() + "</span>";
             relleno += "</div>";
             relleno += "<div class='card-content'>";
@@ -113,6 +113,7 @@ public partial class Galeria_Admin : System.Web.UI.Page
             relleno += "</div>";
             relleno += "</div>";
         }
+        relleno += "</div>";
         contenido.InnerHtml = relleno;
     }
 

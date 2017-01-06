@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Inicio de Sesión" Language="C#" MasterPageFile="~/MasterPages/MP_Central.master" AutoEventWireup="true" CodeFile="InicioSesion.aspx.cs" Inherits="InicioSesion" %>
+﻿<%@ Page Title="Inicio de Sesión" Language="C#" MasterPageFile="MasterPages/MP_Central.master" AutoEventWireup="true" CodeFile="InicioSesion.aspx.cs" Inherits="InicioSesion" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>

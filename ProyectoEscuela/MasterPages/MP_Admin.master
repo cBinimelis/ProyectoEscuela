@@ -17,6 +17,14 @@
     </asp:ContentPlaceHolder>
 </head>
 <body class="blue-grey lighten-5">
+    
+    <%--PRELOADER DE LA PAGINA--%>
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
     <main>
     <form id="form1" runat="server">
         <nav class="blue-grey darken-4">
@@ -33,8 +41,8 @@
                     <ul class="side-nav" id="mobile-demo">
                         <li>
                             <div class="userView">
-                                <img class="background" src="images/administrador.jpg" />
-                                <a href="#!user"><img runat="server" id="foto_perfil" class="circle" src="images/perfil.jpg"></a>
+                                <img class="background" src="../images/administrador.jpg" />
+                                <a href="#!user"><img runat="server" id="foto_perfil" class="circle" src="../images/perfil.jpg"></a>
                                 <a href="#!name"><span runat="server" id="nombre_admin" class="white-text name">Admin</span></a>
                                 <a href="#!email"><span runat="server" id="correo_admin" class="white-text email">mail@gmail.com</span></a>
                             </div>
