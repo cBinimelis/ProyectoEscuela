@@ -82,8 +82,8 @@ public partial class Mantenedores : System.Web.UI.Page
 
     protected void llenaDropUsuarioNA()
     {
-        String query = "SELEC * FROM Usuarios WHERE id_Tipo = 4";
-        sql.llenacombo(dd_usuario, query, "PrimNombre", "id_Usuario");
+        String query = "SELECT id_usuario, Primer_Nombre +' '+ Apellido_paterno as 'Nombre' FROM Usuarios WHERE id_Tipo = 5";
+        sql.llenacombo(dd_usuario, query, "Nombre", "id_usuario");
     }
 
     protected void SubeImg(int id_foto)
