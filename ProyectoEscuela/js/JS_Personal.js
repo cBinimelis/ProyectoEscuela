@@ -22,6 +22,7 @@
     $('.collapsible').collapsible();
     $('select').material_select();
     $('.materialboxed').materialbox();
+    $('.scrollspy').scrollSpy();
 });
 
 function funciona() {

@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="c:\program files (x86)\microsoft visual studio 14.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
 <FxCopReport Version="14.0">
  <Targets>
-  <Target Name="C:\Users\crist\AppData\Local\Temp\tmp8224.tmp.cadir\bin\App_Code.dll">
+  <Target Name="C:\Users\crist\AppData\Local\Temp\tmp3B44.tmp.cadir\bin\App_Code.dll">
    <Modules>
     <Module Name="app_code.dll">
      <Namespaces>
@@ -10,203 +10,203 @@
        <Types>
         <Type Name="bd_educacionDataSet" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+AlumnosDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.AlumnosDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+ApoderadosDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.ApoderadosDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+AsignaturaAlumnoDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.AsignaturaAlumnoDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+AsignaturasDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.AsignaturasDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+Comentario_ComunicadosDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.Comentario_ComunicadosDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+Comentarios_SubForoDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.Comentarios_SubForoDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+ComunicadosDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.ComunicadosDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+ConexionesDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.ConexionesDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+CursosDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.CursosDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+Estado_FotoDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.Estado_FotoDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+Estado_PublicacionDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.Estado_PublicacionDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+EstadoDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.EstadoDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+Foto_GaleriaDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.Foto_GaleriaDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+Foto_PerfilDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.Foto_PerfilDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+GeneroDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.GeneroDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+ImportanciaDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.ImportanciaDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+ProfesoresDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.ProfesoresDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+Publicacion_SubForoDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.Publicacion_SubForoDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+Tipo_AlumnoDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.Tipo_AlumnoDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+TipoDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.TipoDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+UsuariosDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.UsuariosDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+v_usuarioDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.v_usuarioDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="bd_educacionDataSet+vAlumnosDataTable" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="NonBreaking">
+          <Message TypeName="ImplementISerializableCorrectly" Category="Microsoft.Usage" CheckId="CA2240" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="NonBreaking">
            <Issue Certainty="60" Level="Error">Agregue una implementación de GetObjectData al tipo 'bd_educacionDataSet.vAlumnosDataTable'.</Issue>
           </Message>
          </Messages>
         </Type>
         <Type Name="sql" Kind="Class" Accessibility="Public" ExternallyVisible="True">
          <Messages>
-          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="DependsOnFix">
+          <Message TypeName="TypesThatOwnDisposableFieldsShouldBeDisposable" Category="Microsoft.Design" CheckId="CA1001" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="DependsOnFix">
            <Issue Name="DependsOnFix" Certainty="95" Level="CriticalError">Implemente IDisposable en 'sql' porque crea miembros de los tipos IDisposable siguientes: 'SqlConnection'. Si ya se había distribuido 'sql', agregar nuevos miembros que implementen IDisposable en este tipo se considera un cambio rotundo para los consumidores existentes.</Issue>
           </Message>
          </Messages>
          <Members>
           <Member Name="#consulta(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="DependsOnFix">
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebSites\.NET\Respositorios\ProyectoEscuela\ProyectoEscuela\App_Code" File="sql.cs" Line="83">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'sql.consulta(string)' podría contener las siguientes variables: 'sentencia'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#ejecutar(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="DependsOnFix">
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebSites\.NET\Respositorios\ProyectoEscuela\ProyectoEscuela\App_Code" File="sql.cs" Line="96">La cadena de consulta pasada a 'SqlCommand.SqlCommand(string, SqlConnection)' en 'sql.ejecutar(string)' podría contener las siguientes variables: 'sentencia'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#llenacombo(System.Web.UI.WebControls.DropDownList,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="DependsOnFix">
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebSites\.NET\Respositorios\ProyectoEscuela\ProyectoEscuela\App_Code" File="sql.cs" Line="31">La cadena de consulta pasada a 'SqlDataAdapter.SqlDataAdapter(string, SqlConnection)' en 'sql.llenacombo(DropDownList, string, string, string)' podría contener las siguientes variables: 'sentencia'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
             </Message>
            </Messages>
           </Member>
           <Member Name="#llenaGrid(System.Web.UI.WebControls.GridView,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
            <Messages>
-            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2017-01-08 01:05:50Z" FixCategory="DependsOnFix">
+            <Message TypeName="Revisar consultas SQL para comprobar si tienen vulnerabilidades de seguridad" Category="Microsoft.Security" CheckId="CA2100" Status="Active" Created="2017-01-08 16:12:01Z" FixCategory="DependsOnFix">
              <Issue Name="WithNonLiterals" Certainty="75" Level="Warning" Path="d:\WebSites\.NET\Respositorios\ProyectoEscuela\ProyectoEscuela\App_Code" File="sql.cs" Line="121">La cadena de consulta pasada a 'SqlDataAdapter.SqlDataAdapter(string, SqlConnection)' en 'sql.llenaGrid(GridView, string)' podría contener las siguientes variables: 'sentencia'. Si alguna de estas variables puede proceder de datos proporcionados por el usuario, considere el uso de un procedimiento almacenado o una consulta SQL parametrizada en lugar de compilar la consulta con concatenaciones de cadenas.</Issue>
             </Message>
            </Messages>
