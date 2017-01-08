@@ -11,4 +11,5 @@ public partial class InicioAdmin : System.Web.UI.Page
     {
 
     }
+    
 }

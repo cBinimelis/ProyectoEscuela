@@ -246,8 +246,9 @@
 
 
     <%--SQL DATA SOURCES--%>
-    <asp:SqlDataSource ID="SQLUsuarios" runat="server" ConnectionString="<%$ ConnectionStrings:BD_EducacionString %>" SelectCommand="SELECT * FROM [v_usuario] WHERE id_Estado != 3"
-        UpdateCommand="UPDATE Usuarios SET Primer_Nombre = @Primer_Nombre, Segundo_Nombre = @Segundo_Nombre, Apellido_paterno = @Apellido_paterno, Apellido_materno = @Apellido_materno, Correo = @Correo, Password = @Contraseña, Direccion = @Dirección, id_genero = @id_genero, id_Tipo=@id_tipo, id_Estado=@id_estado  WHERE id_usuario = @id_usuario" DeleteCommand="UPDATE Usuarios SET id_Estado = '3' WHERE id_usuario = @id_usuario">
+    <asp:SqlDataSource ID="SQLUsuarios" runat="server" ConnectionString="<%$ ConnectionStrings:BD_EducacionString %>" SelectCommand="EXEC vUsuario"
+        UpdateCommand="UPDATE Usuarios SET Primer_Nombre = @Primer_Nombre, Segundo_Nombre = @Segundo_Nombre, Apellido_paterno = @Apellido_paterno, Apellido_materno = @Apellido_materno, Correo = @Correo, Password = @Contraseña, Direccion = @Dirección, id_genero = @id_genero, id_Tipo=@id_tipo, id_Estado=@id_estado  WHERE id_usuario = @id_usuario"
+        DeleteCommand="UPDATE Usuarios SET id_Estado = '3' WHERE id_usuario = @id_usuario">
         <DeleteParameters>
             <asp:Parameter Name="id_usuario" />
         </DeleteParameters>
@@ -267,7 +268,12 @@
             <asp:Parameter Name="id_usuario" />
         </UpdateParameters>
     </asp:SqlDataSource>
-    <asp:SqlDataSource ID="SQLAlumnos" runat="server" ConnectionString="<%$ ConnectionStrings:BD_EducacionString %>" SelectCommand="SELECT * FROM [vAlumnos]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SQLAlumnos" runat="server" ConnectionString="<%$ ConnectionStrings:BD_EducacionString %>" SelectCommand="EXEC vAlumnos" 
+        DeleteCommand="UPDATE Usuarios SET id_Estado = '3' WHERE id_usuario = @id_usuario">
+        <DeleteParameters>
+            <asp:Parameter Name="id_usuario" />
+        </DeleteParameters>
+    </asp:SqlDataSource>
     <asp:SqlDataSource ID="SQL_Tipo" runat="server" ConnectionString="<%$ ConnectionStrings:BD_EducacionString %>" SelectCommand="SELECT * FROM [Tipo]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SQL_Estado" runat="server" ConnectionString="<%$ ConnectionStrings:BD_EducacionString %>" SelectCommand="SELECT * FROM [Estado]"></asp:SqlDataSource>
     <asp:SqlDataSource ID="SQL_Genero" runat="server" ConnectionString="<%$ ConnectionStrings:BD_EducacionString %>" SelectCommand="SELECT * FROM [Genero]"></asp:SqlDataSource>

@@ -9,7 +9,7 @@ using System.Data.SqlClient;
 
 public partial class InicioSesion : System.Web.UI.Page
 {
-    sql SQL_Con = new sql();
+    sql sql = new sql();
 
     protected void Page_Load(object sender, EventArgs e)
     {
@@ -25,7 +25,7 @@ public partial class InicioSesion : System.Web.UI.Page
         }
         else
         {
-            SqlDataReader usuario = SQL_Con.consulta("SELECT * FROM Usuarios where Run ='" + txt_usuario.Text + "'");
+            SqlDataReader usuario = sql.consulta("SELECT * FROM Usuarios where Run ='" + txt_usuario.Text + "'");
             if (usuario.Read())
             {
                 if (usuario[7].ToString() == txt_pass.Text)
