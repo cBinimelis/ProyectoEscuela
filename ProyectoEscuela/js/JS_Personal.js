@@ -25,6 +25,7 @@
     $('.scrollspy').scrollSpy();
 });
 
+
 function funciona() {
     swal('Se ve bonito', 'Tenemos una interfaz amigable y vistosa, para que te sientas cómodo con todo', 'success');
 }

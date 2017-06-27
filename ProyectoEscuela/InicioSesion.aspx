@@ -20,7 +20,7 @@
                                 <div class="input-field">
                                     <i class="material-icons prefix" id="i_text" runat="server">account_box</i>
                                     <label>Ingresa tu RUT</label>
-                                    <asp:TextBox runat="server" ID="txt_usuario" MaxLength="9" OnTextChanged="txt_usuario_TextChanged" onkeydown="Reemplazar(this)"></asp:TextBox>
+                                    <asp:TextBox runat="server" ID="txt_usuario" MaxLength="9"></asp:TextBox>
                                 </div>
                                 <div class="input-field">
                                     <i class="material-icons prefix" runat="server">extension</i>
